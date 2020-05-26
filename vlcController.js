@@ -1,11 +1,12 @@
 const Telnet = require('telnet-client')
+require('dotenv').config()
 
 async function run(command) {
     let connection = new Telnet()
        let params = {
-        host: '192.168.1.84',
+        host: process.env.HOST,
         port: 4212,
-        negotiationMandatory: falseCon
+        negotiationMandatory: false
       }
    
     try {
